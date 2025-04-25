@@ -1,0 +1,50 @@
+PINIA + AUTO ROUTES + AUTO LAYOUT
+
+## INSTALAÇÃO
+1º bun create vuetify
+-> escolha um nome (vai ser o nome da pasta)
+-> escolha o recomendado
+-> não escolha o typescript
+-> escolha o bun
+-> escolha instalar as dependencias
+
+# LEVANTE A APLICAÇÃO
+1º acesse a pasta de estáo a aplicação
+2º execute: bun dev no terminal
+
+## PARA TESTAR O AUTO ROUTES
+1º Crie uma arquivo clients.vue na pasta pages, coloque qualquer coisa.
+2º Acesse na url http://localhost:3000/clients
+3º Isso serve para qualquer novo arquivo.
+
+## PARA TESTAR O AUTO LAYOUT
+1º Todo o layout da app fica na pasta layouts, o principal se chama default.vue
+2º Copia um layout (wireframe) do vuetify, por exemplo: https://github.com/vuetifyjs/vuetify/blob/master/packages/docs/src/examples/wireframes/baseline.vue
+3º Apaga tudo de layouts/default.vue
+4º cola em layouts/default.vue
+4.1 O exemplotem 2 tipos de script, o option api (<script>) e o composition api (<script setup>. Apague todo o blco do option api: deste <script>  ... </script>
+5º coloque <router-view /> onde você deseja mostrar o conteúdo do app
+
+## PINIA
+
+Temos um app com e itens de menu e um botão login.
+Como faço para os itens do menu aparecerem somente quando eu estiver logado?
+Alem isso, o conteúdo dos arquivos só pode ser exibido se eu estiver logado.
+#comofaz?
+-> USANDO O PINIA
+1º Configurar o estado.
+2º Para visualizar o estado no navegador, utilize a extensão vuedevtools
+3º Crie um arquivo js na pasta stores para o estado desejado. O padrão de nome nome é: useNomedoestadoStore
+4º implemente o state, actions e getters
+5º importe no arquivo que vc deseja verificar o estado
+
+## Autenticação com o Google
+
+1º Fazer um cadastro no firebase
+2º crie um app web
+3º instale o firebase na aplicação usando o bun install firebase
+4º configura o plugin na pasta plugin com suas credenciais geradas pelo firebase
+5º importa e usa o plugin firebase.js criado dentro de index.js (da pasta plugins)
+6º adiciona as chamadas do sdk firebase no user.js do pinia, como signWithPopUp, signOut, getAuth e getProvider
+7º faça o teste em login.vue para buscar nome, foto, etc e testar se os dados estão sendo recebidos do firebase
+
